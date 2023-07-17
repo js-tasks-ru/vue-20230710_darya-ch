@@ -31,18 +31,18 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col">
-          <input ref="firstNumber" value="0" type="number" />
+          <input v-model="firstNumber" type="number" />
         </div>
 
         <div class="col" style="display: flex; flex-direction: column; font-family: emoji">
-          <label v-for="(operation, index) in operations" :key="index">
-            <input type="radio" name="operator" :value="operation.name" @change="calculate(operation.operation)" />
-              {{ operation.value }}
+          <label v-for="(operationValue, operationName) in operations" :key="operationName">
+            <input type="radio" name="operator" :value="operationName" v-model="picked" />
+              {{ operationValue.value }}
             </label>
         </div>
 
         <div class="col">
-          <input ref="secondNumber" value="0" type="number" />
+          <input v-model="secondNumber" type="number" />
         </div>
 
         <div class="col">=</div>
