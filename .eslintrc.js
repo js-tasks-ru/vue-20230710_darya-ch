@@ -8,7 +8,7 @@ const taskbookDevelopmentRules = {
   'vue/no-duplicate-attr-inheritance': 'error',
   'vue/no-useless-v-bind': 'error',
   'vue/padding-line-between-blocks': 'error',
-  'vue/component-name-in-template-casing': ['error', 'PascalCase']
+  'vue/component-name-in-template-casing': ['error', 'PascalCase'],
 };
 
 module.exports = {
@@ -67,7 +67,7 @@ module.exports = {
     'vue/no-duplicate-attr-inheritance': 'error',
     'vue/v-for-delimiter-style': 'error',
 
-    ...process.env.TASK_DEV ? taskbookDevelopmentRules : {},
+    ...(process.env.TASK_DEV ? taskbookDevelopmentRules : {}),
   },
 
   overrides: [

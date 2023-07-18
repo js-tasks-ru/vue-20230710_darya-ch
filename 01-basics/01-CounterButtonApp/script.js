@@ -1,3 +1,14 @@
-// import { createApp } from './vendor/vue.esm-browser.js';
+import { createApp } from './vendor/vue.esm-browser.js';
 
-// Создайте Vue приложение
+const vm = createApp({
+  data() {
+    return {
+      counter: 0
+    };
+  },
+  methods: {
+    count () {
+      return this.counter++;
+    }
+  }
+}).mount('#app');
