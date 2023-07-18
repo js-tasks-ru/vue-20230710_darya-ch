@@ -38,14 +38,15 @@ const vm = createApp({
   },
   computed: {
     filteredEmails () {
-      return this.emails.reduce((filteredEmails, email) => {
-        filteredEmails.push({
+      let filteredEmails = []
+
+      this.emails.map((email) => filteredEmails.push({
           name: email,
           includedEmail: this.email && email.includes(this.email)
-        });
+        })
+      );
 
-        return filteredEmails;
-      }, []);
+      return filteredEmails
     }
   }
 }).mount('#app');

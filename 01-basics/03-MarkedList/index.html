@@ -19,7 +19,7 @@
         <ul>
           <li
             v-for="(email, index) in filteredEmails"
-            :class="email.includedEmail && 'marked'"
+            :class="{ 'marked': email.includedEmail }"
             :key="index"
           >
             {{ email.name }}
