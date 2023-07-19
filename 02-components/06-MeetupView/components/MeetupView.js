@@ -40,7 +40,7 @@ export default defineComponent({
 
             <h3>Программа</h3>
             <MeetupAgenda
-              v-if="meetup.organizer"
+              v-if="meetup.agenda.length"
               :agenda="meetup.agenda"
             />
 
