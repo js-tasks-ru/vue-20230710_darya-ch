@@ -10,7 +10,7 @@ export default defineComponent({
 
   data() {
     return {
-      count: undefined,
+      count: 0,
     };
   },
 
